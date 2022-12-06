@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Environments>
+	<Environment type="dev" url="https://legal.thomsonreuters.com/en"></Environment>
+</Environments>
