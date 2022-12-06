@@ -31,12 +31,19 @@ namespace TestProject2
             viewPlans.Click();
 
             IWebElement generalCounsel = webDriver.FindElement(By.XPath("//label[contains(text(),'General counsel Selected']"));
+            bool elementSelected = generalCounsel.Selected.Equals(true);
 
             IWebElement noOfSeats = webDriver.FindElement(By.Id("Numberofseats"));
             noOfSeats.SendKeys("5");
 
             IWebElement duration = webDriver.FindElement(By.Id("duration");
             duration.SendKeys("5");
+        }
+
+        public static bool IsSelected(this IWebElement element)
+        {
+            var webElement = element.FindElement(By.TagName("input"));
+            return Convert.ToBoolean(webElement.GetAttribute("aria-Checked"));
         }
 
 
